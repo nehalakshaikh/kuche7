@@ -1,0 +1,8 @@
+Flask
+pandas
+openpyxl
+math
+render_template
+request
+send_file
+os
