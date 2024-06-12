@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Handle Pasting Report</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            color: #000000;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+        }
+        .logo {
+            background-color: #ffffff;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .logo img {
+            max-width: 100%;
+        }
+        .file-input {
+            margin: 20px 0;
+        }
+        .button {
+            background-color: #333333;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background-color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo">
+        </div>
+        <h1>Create Handle Pasting Report</h1>
+        <form id="uploadForm" action="/" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" class="file-input" accept=".xlsx, .xls, .csv" required>
+            <button type="submit" class="button">Upload and Process</button>
+        </form>
+    </div>
+</body>
+</html>
+
+
+
